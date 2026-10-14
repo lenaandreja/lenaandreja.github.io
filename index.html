@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Studio Name – Photography</title>
-<meta name="description" content="Natural, candid, timeless photography by Studio Name.">
+<title>Lena Andreichuk Photography – Wedding Photographer in Vienna</title>
+<meta name="description" content="Wedding photographer in Vienna. Honest, timeless photos of real moments, by Lena Andreichuk.">
+<script>try{if(!localStorage.getItem('lang'))document.documentElement.className='i18n-wait'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
@@ -15,80 +16,82 @@
 <header class="site-header" id="top">
   <nav class="menu" id="menu" aria-label="Main">
     <ul class="l">
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
     </ul>
     <ul class="r">
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="de">DE</button></li>
     </ul>
   </nav>
-  <a class="brand" href="#top">Studio Name</a>
-  <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  <a class="brand" href="#top">Lena Andreichuk</a>
+  <button class="menu-btn" data-i18n-aria="aria.menu" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
 </header>
 
 <main>
   <!-- FULL-SCREEN SLIDES: add or remove .slide blocks, the script picks them up automatically -->
   <section class="hero" aria-label="Featured photos">
-    <h1 class="sr">Andreichuk – Photography</h1>
-    <div class="slide on"><img src="images/01.jpg" alt="Describe photo 1"></div>
-    <div class="slide"><img src="images/02.jpg" alt="Describe photo 2"></div>
-    <div class="slide"><img src="images/03.jpg" alt="Describe photo 3"></div>
-    <div class="slide"><img src="images/04.jpg" alt="Describe photo 4"></div>
-    <div class="slide"><img src="images/05.jpg" alt="Describe photo 5"></div>
-    <button class="arrow prev" aria-label="Previous photo">&#8249;</button>
-    <button class="arrow next" aria-label="Next photo">&#8250;</button>
-    <a class="cta" href="#contact">Send inquiry</a>
+    <h1 class="sr">Lena Andreichuk Photography</h1>
+    <div class="slide on"><img src="images/01.jpg" data-n="1" alt="Photo 1"></div>
+    <div class="slide"><img src="images/02.jpg" data-n="2" alt="Photo 2"></div>
+    <div class="slide"><img src="images/03.jpg" data-n="3" alt="Photo 3"></div>
+    <div class="slide"><img src="images/04.jpg" data-n="4" alt="Photo 4"></div>
+    <div class="slide"><img src="images/05.jpg" data-n="5" alt="Photo 5"></div>
+    <button class="arrow prev" data-i18n-aria="aria.prev" aria-label="Previous photo">&#8249;</button>
+    <button class="arrow next" data-i18n-aria="aria.next" aria-label="Next photo">&#8250;</button>
+    <a class="cta" href="#contact" data-i18n="cta">Send inquiry</a>
     <div class="dots"></div>
   </section>
 
   <section id="portfolio">
     <div class="wrap">
-      <h2>Portfolio</h2>
+      <h2 data-i18n="nav.portfolio">Portfolio</h2>
       <div class="grid">
-        <img src="images/02.jpg" alt="Describe photo" loading="lazy">
-        <img src="images/05.jpg" alt="Describe photo" loading="lazy">
-        <img src="images/01.jpg" alt="Describe photo" loading="lazy">
-        <img src="images/06.jpg" alt="Describe photo" loading="lazy">
-        <img src="images/04.jpg" alt="Describe photo" loading="lazy">
-        <img src="images/03.jpg" alt="Describe photo" loading="lazy">
+        <img src="images/02.jpg" data-n="2" alt="Photo 2" loading="lazy">
+        <img src="images/05.jpg" data-n="5" alt="Photo 5" loading="lazy">
+        <img src="images/01.jpg" data-n="1" alt="Photo 1" loading="lazy">
+        <img src="images/06.jpg" data-n="6" alt="Photo 6" loading="lazy">
+        <img src="images/04.jpg" data-n="4" alt="Photo 4" loading="lazy">
+        <img src="images/03.jpg" data-n="3" alt="Photo 3" loading="lazy">
       </div>
     </div>
   </section>
 
   <section id="about">
     <div class="wrap about">
-      <img src="images/20.jpg" alt="Portrait of the photographer" loading="lazy">
+      <img src="images/20.jpg" data-i18n-alt="alt.portrait" alt="Portrait of Lena Andreichuk" loading="lazy">
       <div>
-        <h2>A few words about me</h2>
-        <p>Hi, I'm Olena, a photographer based in Vienna. My style is natural, warm and focused on real moments rather than posed ones.</p>
-        <p>I travel for work and am available across Europe. Tell me about your day and I'll tell you how I'd photograph it.</p>
+        <h2 data-i18n="about.title">A few words about me</h2>
+        <p data-i18n="about.p1">I'm Olena (Lena) Andreichuk, a wedding photographer based in Vienna. For more than 13 years I have been photographing couples, and I never look for the staged pose. I look for the small, true moments: a quiet glance, a familiar smile, a tender gesture.</p>
+        <p data-i18n="about.p2">I notice the details that get lost in the rush of a wedding day, so you can look back and feel how it really was. Vienna is home, but I'm happy to travel to wherever you celebrate.</p>
       </div>
     </div>
   </section>
 
   <section id="reviews">
     <div class="wrap">
-      <h2>What clients say</h2>
+      <h2 data-i18n="reviews.title">What clients say</h2>
       <div class="quotes">
-        <blockquote><p>Sample review. Replace this with a real client quote about the experience and the photos.</p><cite>Client name, location</cite></blockquote>
-        <blockquote><p>Sample review. Replace this with a real client quote about the experience and the photos.</p><cite>Client name, location</cite></blockquote>
-        <blockquote><p>Sample review. Replace this with a real client quote about the experience and the photos.</p><cite>Client name, location</cite></blockquote>
+        <blockquote><p data-i18n="review.sample">Sample review. Replace this with a real client quote about the experience and the photos.</p><cite data-i18n="review.cite">Client name, location</cite></blockquote>
+        <blockquote><p data-i18n="review.sample">Sample review. Replace this with a real client quote about the experience and the photos.</p><cite data-i18n="review.cite">Client name, location</cite></blockquote>
+        <blockquote><p data-i18n="review.sample">Sample review. Replace this with a real client quote about the experience and the photos.</p><cite data-i18n="review.cite">Client name, location</cite></blockquote>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap contact">
-      <h2>Let's work together</h2>
-      <p>Tell me your date, location and what you have in mind.</p>
-      <a class="mail" href="mailto:hello@example.com">hello@example.com</a>
-      <p class="social"><a href="https://instagram.com/">Instagram</a> <a href="https://wa.me/">WhatsApp</a> <a href="https://pinterest.com/">Pinterest</a></p>
+      <h2 data-i18n="contact.title">Let's work together</h2>
+      <p data-i18n="contact.text">Tell me your date, location and what you have in mind.</p>
+      <a class="mail" href="mailto:olenaandreichuk@gmail.com">olenaandreichuk@gmail.com</a>
+      <p class="social"><a href="tel:+436608360994">+43 660 8360994</a> <a href="https://www.instagram.com/lenaandreja/" target="_blank" rel="noopener">Instagram</a></p>
+      <p class="loc" data-i18n="contact.loc">Vienna, Austria</p>
     </div>
   </section>
 </main>
 
-<footer>&copy; 2026 Studio Name. All rights reserved.</footer>
+<footer data-i18n="footer">&copy; 2026 Lena Andreichuk Photography. All rights reserved.</footer>
 
 <script src="script.js"></script>
 </body>

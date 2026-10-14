@@ -13,11 +13,14 @@ a{color:inherit;text-decoration:none}
 .site-header.solid{background:var(--paper);color:var(--ink);padding:.9rem 3vw;box-shadow:0 1px 0 var(--line)}
 .site-header.solid::before{opacity:0}
 .menu{display:contents}
-.menu ul{display:flex;gap:2.4rem;list-style:none;padding:0;grid-row:1}
+.menu ul{display:flex;align-items:center;gap:2rem;list-style:none;padding:0;grid-row:1}
 .menu .l{grid-column:1;justify-self:start}
 .menu .r{grid-column:3;justify-self:end}
 .menu a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
 .menu a:hover{opacity:.7}
+.lang{display:flex;align-items:center;gap:.4rem;font-size:.78rem;letter-spacing:.2em}
+.lang button{background:none;border:0;color:inherit;font:inherit;letter-spacing:inherit;padding:.2rem;cursor:pointer;opacity:.6}
+.lang button[aria-pressed=true]{opacity:1;border-bottom:1px solid currentColor}
 .brand{grid-column:2;grid-row:1;font:italic 500 1.9rem/1 var(--head);letter-spacing:.02em}
 .menu-btn{display:none}
 
@@ -54,13 +57,16 @@ cite{display:block;margin-top:1rem;font-style:normal;font-size:.85rem;color:var(
 .contact{text-align:center}
 .mail{display:inline-block;margin:1.4rem 0;font:italic 500 clamp(1.5rem,3.5vw,2.4rem)/1.2 var(--head);border-bottom:1px solid var(--ink)}
 .social a{margin:0 .8rem;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+.loc{margin-top:1rem;font-size:.85rem;color:var(--muted)}
+
+/* hide page until the language is known (max 2s) so visitors never see a flash of the wrong language */
+@keyframes i18nshow{to{visibility:visible}}
+.i18n-wait main,.i18n-wait footer{visibility:hidden;animation:i18nshow 0s 2s forwards}
 footer{padding:2rem 6vw;text-align:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line)}
 
 /* TABLET + MOBILE */
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:800px){
   .site-header{grid-template-columns:1fr auto}
   .brand{grid-column:1;position:relative;z-index:2}
   .menu-btn{display:block;grid-column:2;grid-row:1;position:relative;z-index:2;background:none;border:0;color:inherit;padding:.5rem;cursor:pointer}
@@ -73,6 +79,7 @@ footer{padding:2rem 6vw;text-align:center;font-size:.8rem;color:var(--muted);bor
   .menu.open{display:flex}
   .menu ul{flex-direction:column;align-items:center;gap:1.6rem}
   .menu a{font-size:1.1rem}
+  .lang{font-size:1rem}
   .about{grid-template-columns:1fr}
 }
 @media (hover:none){.arrow{display:none}}
